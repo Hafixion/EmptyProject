@@ -1,0 +1,4 @@
+name: EmptyProject
+main: com.example.plugin.Main
+api-version: 1.13
+version: SNAPSHOT-1

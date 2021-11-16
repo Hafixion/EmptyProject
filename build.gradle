@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigotmc-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.8-R0.1-SNAPSHOT'
+
+    implementation 'com.github.hazae41:mc-kutils:3.3.2'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31'
+}
